@@ -51,7 +51,7 @@ if keg_exists; then
                 STATUS="disabled"
             fi
 
-            if [ -f ~/Library/LaunchAgents/homebrew.mxcl.php"${php_version}".plist ]; then
+            if [ -f ~/Library/LaunchAgents/homebrew.mxcl.php.plist ]; then
                 IS_PHP_FPM=true
                 SERVER_NAME="php-fpm"
             fi
@@ -64,7 +64,7 @@ if keg_exists; then
                     echo ""
                     echo "Xdebug has been $STATUS, restarting $SERVER_NAME"
 
-                    brew services restart php"${php_version}"
+                    brew services restart php
                 else
                     echo ""
                     echo "Xdebug has been $STATUS, restarting $SERVER_NAME (it might ask for your password)"
